@@ -3,16 +3,23 @@
 <title>NEWHireRegistry</title>
 </head>
 <body bgcolor="#FFA07A">
-<form name="newhire" method="get" autocomplete="off">
+<div>
+<form name="newhire" method="get" autocomplete="off" onsubmit()="return validateForm()">
 
 <h2 align="center">New Hire Registry</h2>
 <center>First Name : <input type="text" placeholder="First Name"  size="25" maxlength="10" pattern="[A-Z]{1}[a-zA-Z}+"><br><br>
 Last Name : <input type="text" placeholder="Last Name" minlength="3"><br><br>
 
 Password: <input type="password" pattern="[A-Z]{1}[a-zA-Z0-9*#$%]{7}">
-Gender : <input type="radio" name="gender" value="m"> Male  
-		 <input type="radio" name="gender" value="f"> Female  
+
+
+Gender : <input type="radio" name="gender"  value="m"> Male  
+		 <input type="radio" name="gender"  value="f"> Female  
+		 <input type="radio" name="gender"  value="o"> Other
 		 <br><br> 
+		 <span id="errorGender"> </span> 
+		 
+		 
 Date of Birth : <input type="date"> <br><br>
 Email ID : <input type="email" placeholder="abc@gmail.com" pattern="[A-Za-z0-9_.]+[@]{1}[A-Za-z]+(.com/.co.in)"><br><br>
 Mobile Number:<input type="text" placeholder="Enter mobile number" maxlength="10" pattern="[6-9]{1}[0-9]{9}"><br><br>
@@ -39,7 +46,32 @@ Location Preferred : <select name="location" multiple>
 <input type="reset"><br><br>
 
 </center>
-
+</div>
 </form>
+
+<script>
+function validateForm()
+{
+
+ var elemets =document.getElementsByName("gender");
+ var count=0;
+ for(var i=0;i<elemets.length;i++)
+ {
+	 if(elemets[i].checked)
+		 count++;
+
+ }	 
+	if(count==0)
+	{
+		document.getElementById("errorGender").innerHTML="Please select a gender";
+		return false;
+	}
+	else
+	{
+		document.getElementById("errorGender").innerHTML="";
+		return true;
+	}
+}
+</script>
 </body>
 </html>
