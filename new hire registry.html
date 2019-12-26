@@ -3,14 +3,14 @@
 <title>NEWHireRegistry</title>
 </head>
 <body>
-<fieldset style="width: 400px; position: absolute; border: 1px solid black; text-align: left;">
+<fieldset style="width: 500px; position: absolute; border: 1px solid black; text-align: left;">
 <form name="newhire" method="get" autocomplete="off" onsubmit="return validateForm()">
 <legend align=center><font size="12"> New Hire Registry</font></legend>
 
 <center>First Name : <input type="text" placeholder="First Name"  size="25" maxlength="10" pattern="[A-Z]{1}[a-zA-Z}+"><br><br>
 Last Name : <input type="text" placeholder="Last Name" minlength="3"><br><br>
 
-Password: <input type="password" pattern="[A-Z]{1}[a-zA-Z0-9*#$%]{7}">
+Password: <input type="password" pattern="[A-Z]{1}[a-zA-Z0-9*#$%]{7}"><br><br>
 
 
 Gender : <input type="radio" name="gender"  value="m"> Male  
@@ -26,14 +26,14 @@ Mobile Number:<input type="text" placeholder="Enter mobile number" maxlength="10
 Favourite Color : <input type="color" size="25"><br><br>
 Time : <input type="time" placeholder="Enter number"><br><br>
 Date time : <input type="datetime-local"><br><br>
-Favourite Number : 	<input type="number" min="0" max="5">&nbsp;	 Upload CV : <input type="file"><br><br>
+Favourite Number : 	<input type="number" min="0" max="5"><br><br>	 Upload CV : <input type="file"><br><br>
 		 
 Languages Known : <input type="checkbox" name="lang1" value="eng" checked>English 
 					<input type="checkbox" name="lang2" value="mal">Malayalam 
 					<input type="checkbox" name="lang3" value="hindi">Hindi 
 					<input type="checkbox" name="lang4" value="tamil">Tamil <BR> <BR>
 					
-Address : <textarea rows="4" cols="16"> </textarea>&nbsp;
+Address : <textarea rows="4" cols="16"> </textarea><br><br>
 Location Preferred : <select name="location" multiple>
 						<option value="">Select...</option>
 						<option value="bgl">Bangalore</option>
