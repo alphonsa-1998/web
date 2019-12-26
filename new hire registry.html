@@ -4,7 +4,7 @@
 </head>
 <body bgcolor="#FFA07A">
 <div>
-<form name="newhire" method="get" autocomplete="off" onsubmit()="return validateForm()">
+<form name="newhire" method="get" autocomplete="off" onsubmit="return validateForm()">
 
 <h2 align="center">New Hire Registry</h2>
 <center>First Name : <input type="text" placeholder="First Name"  size="25" maxlength="10" pattern="[A-Z]{1}[a-zA-Z}+"><br><br>
@@ -16,9 +16,9 @@ Password: <input type="password" pattern="[A-Z]{1}[a-zA-Z0-9*#$%]{7}">
 Gender : <input type="radio" name="gender"  value="m"> Male  
 		 <input type="radio" name="gender"  value="f"> Female  
 		 <input type="radio" name="gender"  value="o"> Other
-		 <br><br> 
-		 <span id="errorGender"> </span> 
 		 
+		 <span id="errorGender"> </span> 
+		 <br><br> 
 		 
 Date of Birth : <input type="date"> <br><br>
 Email ID : <input type="email" placeholder="abc@gmail.com" pattern="[A-Za-z0-9_.]+[@]{1}[A-Za-z]+(.com/.co.in)"><br><br>
@@ -63,7 +63,8 @@ function validateForm()
  }	 
 	if(count==0)
 	{
-		document.getElementById("errorGender").innerHTML="Please select a gender";
+	
+		document.getElementById("errorGender").innerHTML="Error::::Please select a gender";
 		return false;
 	}
 	else
