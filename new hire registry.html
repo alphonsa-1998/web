@@ -4,8 +4,8 @@
 </head>
 <body>
 <fieldset style="width: 500px; position: absolute; border: 1px solid gray; text-align: left; text-align: center; padding: 40px; background-color:#999999">
-<form name="newhire" method="get" autocomplete="off" onsubmit="return validateForm()">
-<legend align=center><font size="12"> New Hire Registry</font></legend>
+<form name="newhire" method="get" autocomplete="off" onsubmit="return validateDrop()">
+<h2 align=center> New Hire Registry</h2>
 
 <center>First Name : <input type="text" placeholder="First Name"  size="25" maxlength="10" pattern="[A-Z]{1}[a-zA-Z}+"><br><br>
 Last Name : <input type="text" placeholder="Last Name" minlength="3"><br><br>
@@ -34,13 +34,16 @@ Languages Known : <input type="checkbox" name="lang1" value="eng" checked>Englis
 					<input type="checkbox" name="lang4" value="tamil">Tamil <BR> <BR>
 					
 Address : <textarea rows="4" cols="16"> </textarea><br><br>
-Location Preferred : <select name="location" multiple>
-						<option value="">Select...</option>
-						<option value="bgl">Bangalore</option>
-						<option value="hybd" selected>Hyderabad</option>
-						<option value="mi">Mumbai</option>
-						<option value="gur">Gurgaon</option>
-						</select><br><br>
+Location Preferred : <select name="location">
+						<option value="select" >Select...</option>
+						<option value="bgl" class="option1">Bangalore</option>
+						<option value="hybd" class="option1">Hyderabad</option>
+						<option value="mi" class="option1">Mumbai</option>
+						<option value="gur" class="option1" >Gurgaon</option>
+						
+						</select>
+						<span id="errorLOCATION"> </span> 
+		<br><br>
 
 <input type="submit"><br><br>
 <input type="reset"><br><br>
@@ -74,6 +77,32 @@ function validateForm()
 		document.getElementById("errorGender").innerHTML="";
 		return true;
 	}
+	
+}
+
+function validateDrop()
+{
+	var lang =document.getElementsByClassName("option1");
+	 var c=0;
+	 
+ for(var j=0;j<lang.length;j++)
+ {
+	 if(lang[j].selected)
+		 c++;
+
+ }	
+ if(c==0)
+	{
+	
+		document.getElementById("errorLOCATION").innerHTML="Error::::SELECT ONE OPTION";
+		return false;
+	}
+	else
+	{
+		document.getElementById("errorLOCATION").innerHTML="";
+		return true;
+	} 
+	
 }
 </script>
 </body>
