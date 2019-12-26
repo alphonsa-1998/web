@@ -3,19 +3,30 @@
 <title>NEWHireRegistry</title>
 </head>
 <body bgcolor="#FFA07A">
-<form name="newhire" method="get">
+<form name="newhire" method="get" autocomplete="off">
+
 <h2 align="center">New Hire Registry</h2>
-<center>First Name : <input type="text" placeholder="First Name"><br><br>
-Last Name : <input type="text" placeholder="Last Name"><br><br>
+<center>First Name : <input type="text" placeholder="First Name"  size="25" maxlength="10" pattern="[A-Z]{1}[a-zA-Z}+"><br><br>
+Last Name : <input type="text" placeholder="Last Name" minlength="3"><br><br>
+
+Password: <input type="password" pattern="[A-Z]{1}[a-zA-Z0-9*#$%]{7}">
 Gender : <input type="radio" name="gender" value="m"> Male  
 		 <input type="radio" name="gender" value="f"> Female  
-		 <br><br>
+		 <br><br> 
+Date of Birth : <input type="date"> <br><br>
+Email ID : <input type="email" placeholder="abc@gmail.com" pattern="[A-Za-z0-9_.]+[@]{1}[A-Za-z]+(.com/.co.in)"><br><br>
+Mobile Number:<input type="text" placeholder="Enter mobile number" maxlength="10" pattern="[6-9]{1}[0-9]{9}"><br><br>
+Favourite Color : <input type="color" size="25"><br><br>
+Time : <input type="time" placeholder="Enter number"><br><br>
+Date time : <input type="datetime-local"><br><br>
+Favourite Number : 	<input type="number" min="0" max="5">&nbsp;	 Upload CV : <input type="file"><br><br>
+		 
 Languages Known : <input type="checkbox" name="lang1" value="eng" checked>English 
 					<input type="checkbox" name="lang2" value="mal">Malayalam 
 					<input type="checkbox" name="lang3" value="hindi">Hindi 
-					<input type="checkbox" name="lang4" value="tamil">Tamil  <BR>
+					<input type="checkbox" name="lang4" value="tamil">Tamil <BR> <BR>
 					
-Address : <textarea> </textarea><br><br>
+Address : <textarea rows="4" cols="16"> </textarea>&nbsp;
 Location Preferred : <select name="location" multiple>
 						<option value="">Select...</option>
 						<option value="bgl">Bangalore</option>
@@ -23,9 +34,10 @@ Location Preferred : <select name="location" multiple>
 						<option value="mi">Mumbai</option>
 						<option value="gur">Gurgaon</option>
 						</select><br><br>
+
 <input type="submit"><br><br>
 <input type="reset"><br><br>
-<input type="file"><br><br>
+
 </center>
 
 </form>
