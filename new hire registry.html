@@ -2,11 +2,11 @@
 <head>
 <title>NEWHireRegistry</title>
 </head>
-<body bgcolor="#FFA07A">
-<div>
+<body>
+<fieldset style="width: 400px; position: absolute; border: 1px solid black; text-align: left;">
 <form name="newhire" method="get" autocomplete="off" onsubmit="return validateForm()">
+<legend align=center><font size="12"> New Hire Registry</font></legend>
 
-<h2 align="center">New Hire Registry</h2>
 <center>First Name : <input type="text" placeholder="First Name"  size="25" maxlength="10" pattern="[A-Z]{1}[a-zA-Z}+"><br><br>
 Last Name : <input type="text" placeholder="Last Name" minlength="3"><br><br>
 
@@ -46,8 +46,10 @@ Location Preferred : <select name="location" multiple>
 <input type="reset"><br><br>
 
 </center>
-</div>
+</fieldset>
 </form>
+
+
 
 <script>
 function validateForm()
