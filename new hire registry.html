@@ -3,7 +3,7 @@
 <title>NEWHireRegistry</title>
 </head>
 <body>
-<fieldset style="width: 500px; position: absolute; border: 1px solid gray; text-align: left; text-align: center; padding: 40px; background-color:#999999">
+<fieldset style="width: 500px; position: absolute; border: 1px solid gray; text-align: left; padding: 40px; background-color:#999999">
 <form name="newhire" method="get" autocomplete="off" onsubmit="return submitForm()">
 <h2 align=center> New Hire Registry</h2>
 
@@ -57,13 +57,15 @@ Location Preferred : <select name="location">
 <script>
 function submitForm()
 {
-if(validateForm() && validateDrop())
+alert(validateRadio());
+alert(validateDrop());
+if(validateRadio() && validateDrop())
 	return true;
 	else 
 	return false;
 }
 
-function validateForm()
+function validateRadio()
 {
 
  var elemets =document.getElementsByName("gender");
