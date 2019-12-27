@@ -2,14 +2,14 @@
 <head>
 </head>
 <body>
-<p>welcome</p>
+<p>welcome to jquery</p>
 <h3>hello</h3>
 <script src="../JS/jquery-3.4.1.js">  </script>
 
 
 
 <form>
-<input type="text" name="txt1" id="txt1"/>
+<input type="text" name="txt1" value="you are a beginner" id="txt1"/>
 <input type="button" name="btn" id="btn"/>
 <span id="id1"> </span>
 </form>
@@ -18,16 +18,35 @@
 $(document).ready(function(){
 alert("welcome");
 
-$("p").text("hai");
+//$("p").text("hai");
 $("p").css({"color":"red","background-color":"yellow"});
 $("h3").attr("title","heading");
 });
 
 $("#btn").click(function(){
-$("#id1").text($("#txt1").val());
-
+//$("#id1").text($("#txt1").val());
+$("#txt1").val("you are an expert");
 
 });
+
+$("input").focus(function(){
+
+$(this).css({"background-color":"cyan"});
+
+});
+
+$("input").blur(function(){
+
+$(this).css({"background-color":"blue"});
+
+});
+
+$("p").click(function(){
+//$(this).css({"display":"none"});
+$(this).hide();
+});
+
+
 
 </script>
 </body>
