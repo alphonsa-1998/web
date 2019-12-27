@@ -4,7 +4,9 @@
 
 <body>
 <form>
-Enter text:<input type="text" id="txt1" onclick="changeBackgroundColor()"/>
+Enter text:<input type="text" id="txt1" onfocus="changeBackgroundColor(this)" onblur="blur()"/>
+<br><input type="text" id="txt2" onfocus="changeBackgroundColor(this)">
+
 <br><input type="button" name="ok" value="ok" onclick="reverseCount()"/>
 <br>
 Reversed text is<input type="text" id="rev"/>
@@ -54,12 +56,20 @@ function reverseInPlace()
 	
   }
 
-function changeBackgroundColor()
+function changeBackgroundColor(ele)
 {
-document.getElementById("txt1").style.backgroundColor="#d3f2f2";
-document.getElementById("txt1").style.color="#b63bad";
+ele.style.backgroundColor="#d3f2f2";
+ele.style.color="#b63bad";
 
 }
+
+
+function blur()
+{
+document.getElementById("txt1").style.backgroundColor="#ffffff";
+document.getElementById("txt1").style.color="#000000";
+}
+
 
 </script>
 </body>
