@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>LOCATION DETAILS</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+.middle{
+margin-top:50px;
+margin-left:400px;
+margin-right:200px;
+background-image: url('loc.png');
+}
+
+ .imgAlign{
+ margin-top:50px;
+margin-left:200px;
+margin-right:200px;
+
+ }
+
+
+
+</style>
+
+</head>
+
+<body style="background-image:url('2.png');background-repeat:no-repeat;background-size:cover;background-position:0% 0%;background-size:100% 100%">
+<div align="center">
+<h1><b>LimeTray</b></h1>
+<h4><b>Food Delivery App</b></h4>
+<form name="location">
+
+<div class="row">
+<div class="col-xs-12 middle" style="height:200px; text-align:center">
+<h2 align="center" style="font-family:seriff; font-size:25"><b>Delivery Location</b></h2><br/>
+
+<b>TO:<input type="text" name="tolocation" id="tolocation" placeholder="TO" pattern="^[a-zA-Z, ]+$" oninput="tonameValidate()"/> </b>
+<span id="span1" style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;
+<b>FROM:<input type="text" name="fromlocation" id="fromlocation" placeholder="FROM" pattern="^[a-zA-Z, ]+$" oninput="fromnameValidate()"/></b>
+<span id="span2" style="color:red"> </span>
+<br/><br/>
+<div align="center"><input type="button" value="SEARCH" name="btn"/>
+</div>
+</div>
+</div>
+
+<div align="center" class="imgAlign">
+<table border="0" cellpadding="10"  style="background-color:#e1f6f8; border-color:#e1f6f8">
+<tr>
+<th colspan="3">TRAIN NO:</th>
+</tr>
+<tr>
+<th>TIMING</th>
+<th>STATION</th>
+<th>RESTAURANT</th>
+</tr>
+<tr>
+<td>Start</td>
+<td>Banglore City</td>
+<td>Salt Indian Restaurant</td>
+</tr>
+<tr>
+<td>13.07</td>
+<td>Coimbatore</td>
+<td>Jalpaan Coimbatore</td>
+</tr>
+
+<td>16.55</td>
+<td>Ernakulam South</td>
+<td>Kayees Hotel</td>
+</tr>
+
+</table>
+</div>
+
+</form>
+<script>
+function tonameValidate()
+{
+var val=document.getElementById('tolocation').value;
+var pattern="^[a-zA-Z, ]+$";
+ if (!val.match(pattern)) 
+     document.getElementById('span1').innerHTML="ALPHABETS REQUIRED";
+ else
+  document.getElementById('span1').innerHTML="";
+    
+}
+
+function fromnameValidate()
+{
+var val=document.getElementById('fromlocation').value;
+var pattern="^[a-zA-Z, ]+$";
+ if (!val.match(pattern)) 
+     document.getElementById('span2').innerHTML="ALPHABETS REQUIRED";
+ else
+  document.getElementById('span2').innerHTML="";
+    
+}
+
+</script>
+</body>
+</html>
+
